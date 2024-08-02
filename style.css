@@ -15,7 +15,6 @@ body {
     top: 0;
     position: relative;
     width: 100%;
-    z-index: -2;
 }
 
 .sky img {
@@ -29,14 +28,14 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-40%, -50%);
-    z-index: 1;
-    cursor: pointer;
-    width:auto;
-    height: 80vh;
-    animation: fly 3s ease 0s infinite forwards none;
+    transform: translate(-50%, -50%);
+    
 }
-
+.plane img {
+    width: 120%;
+    height: auto;
+    animation: fly 10s ease-in-out infinite;
+}
 .overlay {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
@@ -48,8 +47,6 @@ body {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    cursor: pointer;
 }
 
 .navbar ul {
@@ -59,7 +56,7 @@ body {
     display: flex;
     width: 100%;
     align-items: center;
-    /* justify-content: max-content; */
+    justify-content: center;
 }
 
 .navbar a {
@@ -85,40 +82,6 @@ section {
     margin: 10vh 15vh 0 15vh;
 }
 
-@media (max-width: 768px) {
-    section {
-        margin: 10vh 10vh 0 10vh;
-    }
-    .overlay {
-        font-size: 4rem;
-    }
-    .plane img {
-        height: 40vh;
-    }
-    .sky img {
-        max-height: 20vh;
-    }
-}
-
-@media (max-width: 479px) {
-    section {
-        margin: 5vh 5vh 0 5vh;
-    }
-    .overlay {
-        font-size: 3rem;
-    }
-    section p {
-        margin: 1vh 0 3vh 0;
-    }
-    .navbar a {
-        padding: 10px;
-    }
-    .navbar {
-        font-size: 0.8rem;
-    }
-
-}
-
 @keyframes fly {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -140,10 +103,140 @@ section {
         transform: translateY(0) rotate(0deg);
     }
 }
+p{
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    
+}
+li{
+    line-height: 1.6rem;
+    margin-top: 1rem;
+}
 
-.plane img {
-    animation: fly 5s ease-in-out infinite;
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666D67; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 3px solid #f1f1f1; /* Padding around the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2A3E3E; /* Color of the scrollbar thumb on hover */
 }
 
 /* Color Palette: */
-#2A3E3E, #666D67, #6F5F52, #40435D, #0B1637
+/* #2A3E3E, #666D67, #6F5F52, #40435D, #0B1637 */
+
+/* 2xl */
+@media (max-width: 1536px) {
+    .overlay {
+        font-size: 6rem;
+    }
+    .navbar a {
+        font-size: 1.4rem;
+    }
+    section {
+        margin: 10vh 12vh 0 12vh;
+    }
+    h2{
+        font-size: 2rem;
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+    .overlay {
+        font-size: 5.5rem;
+    }
+    .navbar a {
+        font-size: 1.3rem;
+    }
+    section {
+        margin: 9vh 10vh 0 10vh;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+    .overlay {
+        font-size: 5rem;
+    }
+    .navbar a {
+        font-size: 1.1rem;
+    }
+    section {
+        margin: 7vh 5vh 0 5vh;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .overlay {
+        font-size: 4rem;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+    section {
+        margin: 5vh 2vh 0 2vh;
+    }
+    h2{
+        font-size: 1.3rem;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .overlay {
+        font-size: 3rem;
+    }
+    .navbar a {
+        font-size: 0.8rem;
+    }
+    section {
+        margin: 4vh 1vh 0 1vh;
+    }
+    h2{
+        font-size: 1.1rem;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .overlay {
+        font-size: 2.5rem;
+    }
+    .navbar a {
+        font-size: 0.7rem;
+    }
+    section {
+        margin: 3vh 0.5vh 0 0.5vh;
+    }
+    h2{
+        font-size: 0.9rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    li{
+        font-size: 0.8rem;
+    }
+    .sky {
+        height: 50%;
+        
+    }
+}
