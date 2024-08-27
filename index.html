@@ -12,10 +12,16 @@
 <body>
 
     <div class="sky">
-        <img src="assets/sky.jpg" alt="sky"></img>
-    
+        <img id='sky'src="assets/sky.jpg" alt="sky"></img>
+        <img id='dark-sky'src="assets/dark-sky.jpg" alt="sky"></img>
+
+
         <div class="plane">
             <img src="assets/mig.png" alt="plane">
+        </div>
+
+        <div class="flares">
+            <img src="assets/flare1.png" alt="flares"></img>
         </div>
         
         <div class="overlay">
@@ -34,6 +40,7 @@
     </nav>
 
     <main> 
+        <button onclick="darkModeToggle()">Dark mode</button>
         <section id="loadout">
             <h2>Loadout</h2>
             <p>
@@ -106,6 +113,7 @@
                 You can be very effective in the Mig-29, but you have to play smarter than your western counterparts.
             </p>
             <p>Also <b>NEVER</b> play the 13.0 to 13.7 bracket, you will get rawdogged</p>
+
         </section>
     </main>
     <script src="script.js"></script>
