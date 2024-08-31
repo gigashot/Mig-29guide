@@ -11,8 +11,12 @@ body {
     overflow-x: hidden;
 }
 body.dark-mode{
-    background-color: darkblue;
+    background-color: rgb(31, 29, 29);
     color: lightgreen;
+}
+
+body.dark-mode ul{
+    background-color: rgb(10, 10, 10);
 }
 
 
@@ -81,7 +85,7 @@ body.dark-mode #sky {
     width: 5vw;
     height: auto;
 
-    animation: fly 10s ease-in-out infinite;
+    animation: pop 2s ease-in-out infinite;
 }
 
 
@@ -155,24 +159,26 @@ section {
 
 @keyframes pop {
     0% {
-        transform: translateY(0) rotate(0deg);
+        opacity: 100%;
+        transform: translateX(-40px) translateY(-40px);
         animation-timing-function: ease-out;
     }
     25% {
-        transform: translateY(-5%) translateX(-2%) rotate(3deg);
+        transform: translateY(-150px) rotate(30deg);
         animation-timing-function: ease-in;
     }
     50% {
-        transform: translateY(0) rotate(0deg);
+        opacity: 0%;
         animation-timing-function: ease-out;
     }
-    75% {
-        transform: translateY(5%) translateX(2%) rotate(-3deg);
-        animation-timing-function: ease-in;
-    }
     100% {
-        transform: translateY(0) rotate(0deg);
+        opacity: 0%;
+        
     }
+    
+}
+@keyframes po {
+    
 }
 
 p{
@@ -297,6 +303,7 @@ li{
     }
     section {
         margin: 3vh 0.5vh 0 0.5vh;
+        display: inline-block;
     }
     h2{
         font-size: 0.9rem;
